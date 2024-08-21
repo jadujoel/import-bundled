@@ -1,0 +1,16 @@
+{
+  "name": "@jadujoel/import-bundled",
+  "version": "0.0.1",
+  "description": "Builds and imports a typescript or javascript file",
+  "main": "index.mjs",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node example.mjs"
+  },
+  "keywords": [],
+  "author": "jlof@evolution.com",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": ">=0.18.0"
+  }
+}
