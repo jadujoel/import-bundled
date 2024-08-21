@@ -1,14 +1,16 @@
 {
   "name": "@jadujoel/import-bundled",
-  "version": "0.0.1",
+  "private": false,
+  "version": "0.0.2",
   "description": "Builds and imports a typescript or javascript file",
   "main": "index.mjs",
   "types": "index.d.ts",
   "scripts": {
-    "test": "node example.mjs"
+    "test": "node example.mjs",
+    "pub": "npm publish --access public"
   },
   "keywords": [],
-  "author": "jlof@evolution.com",
+  "author": "joel.lof@icloud.com",
   "license": "MIT",
   "dependencies": {
     "esbuild": ">=0.18.0"

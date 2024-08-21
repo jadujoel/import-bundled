@@ -5,8 +5,9 @@ import * as url from 'url'
 
 /**
  * @param {string} entry
+ * @param {esbuild.BuildOptions} options
  */
-export async function importDefault(entry: string) {
+export async function importDefault<T>(entry: string, options: esbuild.BuildOptions): Promise<T> {
   await fs.mkdir('.cache/import-bundled', { recursive: true })
   const out = path.resolve('.cache', 'import-bundled', `out-${Date.now()}.mjs`)
   await esbuild.build({
@@ -14,6 +15,7 @@ export async function importDefault(entry: string) {
     outfile: out,
     bundle: true,
     format: 'esm',
+    ...options
   })
   return importDefaultFromFileSystem(out)
 }
